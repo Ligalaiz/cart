@@ -7,17 +7,22 @@
 }
 
 @mixin header-40 {
-  @include fontz(40rem, 1.02, $black-100);
+  @include fontz(4rem, 1.15, $black-100);
   font-weight: 700;
 }
 
 @mixin header-30 {
-  @include fontz(30rem, 1.13, $black-100);
+  @include fontz(3rem, 1.13, $black-100);
   font-weight: 700;
 }
 
 @mixin header-28 {
   @include fontz(2.8rem, 1.14, $black-100);
+  font-weight: 700;
+}
+
+@mixin header-26 {
+  @include fontz(2.6rem, 1.15, $black-100);
   font-weight: 700;
 }
 
@@ -27,14 +32,18 @@
 }
 
 @mixin header-18 {
-  @include fontz(1.8rem, 1.16, $grey-100);
+  @include fontz(1.8rem, 1.16, $grey-1);
   font-weight: 700;
 }
 
 @mixin text-16 {
-  @include fontz(1.6rem, 1.1875, $grey-100);
+  @include fontz(1.6rem, 1.125, $grey-1);
+}
+
+@mixin text-14 {
+  @include fontz(1.4rem, 1.14, $grey-1);
 }
 
 @mixin text-12 {
-  @include fontz(1.2rem, 1.16, $grey-100);
+  @include fontz(1.2rem, 1.16, $grey-1);
 }
