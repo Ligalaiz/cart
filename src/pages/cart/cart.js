@@ -69,7 +69,6 @@ window.addEventListener('load', async () => {
     const selectSelected = document.getElementById('selectSelected');
     const { error, data } = validateForm();
 
-
     if (Object.keys(error).length !== 0) {
       console.log(error);
 

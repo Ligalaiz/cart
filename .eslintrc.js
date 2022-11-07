@@ -21,7 +21,6 @@ module.exports = {
   },
   plugins: ['import', 'jest'],
   rules: {
-    ignoreRegExpLiterals: true,
     'comma-dangle': ['warn', 'always-multiline'],
     semi: ['warn', 'always'],
     'class-methods-use-this': 'off',
@@ -43,8 +42,9 @@ module.exports = {
     'import/no-mutable-exports': 0,
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'no-useless-escape': 'off',
     'lines-between-class-members': 'off',
-    'max-len': ['warn', { code: 120 }],
+    'max-len': ['warn', { code: 120, ignoreRegExpLiterals: true }],
     'no-console': 'warn',
     'no-underscore-dangle': 'off',
     'no-duplicate-imports': ['error', { includeExports: true }],
