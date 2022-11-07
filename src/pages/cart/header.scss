@@ -1,0 +1,385 @@
+@use '../../assets/styles/internals/index';
+
+.header {
+  margin-bottom: 3rem;
+
+  @media (min-width: 767.98px) {
+    margin-bottom: 5.4rem;
+  }
+
+  &__list {
+    display: none;
+
+    @media (min-width: 960.98px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  &__link {
+    @include header-18;
+    line-height: 1;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+
+    @media (min-width: 1045.98px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    @media (min-width: 767.98px) {
+      gap: 2rem;
+    }
+  }
+
+  &__item {
+    line-height: 1;
+
+    &--logo {
+      padding: 0 2.7rem;
+
+      @media (min-width: 767.98px) {
+        padding: 0 3.2rem;
+      }
+    }
+  }
+}
+
+.logo-header {
+  &__link {
+    position: relative;
+
+    width: 16.2rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.option-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 1rem;
+  margin-bottom: 0.2rem;
+
+  @media (min-width: 767.98px) {
+    width: 100%;
+    padding: 3rem 0 3.7rem;
+  }
+}
+
+.search {
+  position: relative;
+
+  width: 2.3rem;
+  height: 2.3rem;
+
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+
+    width: 3rem;
+    height: 3rem;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../../img/search-icon.svg');
+    background-size: 2.3rem;
+  }
+
+  &__field {
+    display: none;
+
+    @media (min-width: 960.98px) {
+      display: block;
+      width: 25rem;
+      border-bottom: 0.1rem solid $grey-1;
+      padding: 0.5rem;
+      padding-left: 0;
+
+      @include header-18;
+      color: $black-100;
+      font-weight: 400;
+
+      &::placeholder {
+        font-weight: 400;
+        color: $grey-1;
+
+        transition: $anim;
+      }
+
+      &:hover::placeholder {
+        font-weight: 400;
+        color: $black-100;
+      }
+    }
+  }
+
+  @media (min-width: 767.98px) {
+    width: 3rem;
+    height: 3rem;
+
+    &:before {
+      background-size: 2.8rem;
+    }
+  }
+
+  @media (min-width: 960.98px) {
+    max-width: 30rem;
+    width: 100%;
+    padding-left: 4.7rem;
+  }
+}
+
+.logo-option {
+  display: flex;
+  width: 10rem;
+  padding-left: 1rem;
+  justify-content: center;
+
+  &__link {
+    position: relative;
+
+    width: 8rem;
+    padding-top: 2.5rem;
+
+    @media (min-width: 767.98px) {
+      width: 10rem;
+      padding-top: 3.1rem;
+    }
+  }
+
+  @media (min-width: 960.98px) {
+    display: none;
+  }
+}
+
+.bar {
+  display: flex;
+  gap: 1.2rem;
+  padding-right: 1rem;
+
+  &__item {
+    position: relative;
+    top: 0.2rem;
+
+    display: flex;
+    align-items: center;
+
+    &--user {
+      display: none;
+
+      @media (min-width: 767.98px) {
+        display: block;
+      }
+    }
+  }
+
+  &__link {
+    &--user {
+      display: none;
+      width: 3rem;
+      height: 3rem;
+
+      background-repeat: no-repeat;
+      background-image: url('../../img/user-icon.svg');
+
+      @media (min-width: 960.98px) {
+        display: block;
+      }
+    }
+
+    &--like {
+      display: block;
+      width: 2.6rem;
+      height: 2.6rem;
+
+      background-position: center;
+      background-size: 2.6rem;
+      background-repeat: no-repeat;
+      background-image: url('../../img/like-icon.svg');
+
+      @media (min-width: 767.98px) {
+        width: 3rem;
+        height: 3rem;
+
+        background-size: 3rem;
+      }
+    }
+
+    &--cart {
+      position: relative;
+
+      display: block;
+      width: 2.3rem;
+      height: 2.3rem;
+
+      background-position: center;
+      background-size: 2.3rem;
+      background-repeat: no-repeat;
+      background-image: url('../../img/cart-icon.svg');
+
+      @media (min-width: 767.98px) {
+        width: 2.5rem;
+        height: 2.5rem;
+
+        background-size: 2.5rem;
+      }
+    }
+  }
+
+  &__count {
+    position: absolute;
+    top: -0.3rem;
+    right: -1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+
+    color: $white-100;
+
+    background-color: $black-100;
+
+    @media (min-width: 767.98px) {
+      right: -0.7rem;
+    }
+  }
+
+  @media (min-width: 767.98px) {
+    gap: 1.7rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: $black-100;
+  padding: 10rem 3rem 3rem 3rem;
+
+  overflow: auto;
+  transition: $anim;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: fixed;
+    left: -100%;
+    height: 7rem;
+
+    width: 100%;
+    top: 0;
+
+    background-color: $black-100;
+    transition: $anim;
+    z-index: 20;
+  }
+
+  &__link {
+    display: block;
+    padding: 0.9rem;
+
+    @include header-26;
+    color: $white-100;
+  }
+
+  &.active,
+  &.active::before {
+    left: 0;
+  }
+}
+
+.menuBtn {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.6rem;
+  border: none;
+  padding: 0;
+  padding-bottom: 0.6rem;
+
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 10;
+}
+
+@media (min-width: 960.98px) {
+  .burger {
+    display: none;
+  }
+}
+
+.line {
+  fill: none;
+  stroke: $black-100;
+  stroke-width: 6;
+  transition: stroke-dasharray 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+
+  @media (min-width: 767.98px) {
+    stroke-width: 8;
+  }
+}
+
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+
+  @media (min-width: 767.98px) {
+    stroke-width: 8;
+  }
+}
+
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+
+  @media (min-width: 767.98px) {
+    stroke-width: 8;
+  }
+}
+
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 8;
+  stroke: $white-100;
+}
+
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 8;
+  stroke: $white-100;
+}
+
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 8;
+  stroke: $white-100;
+}
