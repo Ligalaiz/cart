@@ -21,6 +21,7 @@ module.exports = {
   },
   plugins: ['import', 'jest'],
   rules: {
+    ignoreRegExpLiterals: true,
     'comma-dangle': ['warn', 'always-multiline'],
     semi: ['warn', 'always'],
     'class-methods-use-this': 'off',
