@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -43,6 +43,215 @@
     <title>Cart</title>
   </head>
   <body>
-    <h1>Main Header</h1>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__option option-header">
+            <div class="header__wrap">
+              <div class="option-header__burger burger" id="burger">
+                <button class="menuBtn" type="button" id="menuBtn" aria-label="menu btn">
+                  <svg width="44" height="34" viewBox="16 0 80 80">
+                    <path
+                      class="line line1"
+                      d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+                    />
+                    <path class="line line2" d="M 20,50 H 80" />
+                    <path
+                      class="line line3"
+                      d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="option-header__search search">
+                <input class="search__field" type="text" placeholder="Поиск" />
+              </div>
+            </div>
+            <a class="option-header__logo logo-option" href="#">
+              <div class="logo-option__link">
+                <img src="../../assets/img/logo.svg" alt="logo" />
+              </div>
+            </a>
+            <ul class="option-header__bar bar">
+              <li class="bar__item bar__item--user"><a href="#" class="bar__link bar__link--user"></a></li>
+              <li class="bar__item"><a href="#" class="bar__link bar__link--like"></a></li>
+              <li class="bar__item">
+                <a href="#" class="bar__link bar__link--cart"> </a>
+                <div class="bar__count" id="barCount">4</div>
+              </li>
+            </ul>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__list" id="nav">
+              <li class="header__item">
+                <a class="header__link" href="#">Страница 1</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Страница 2</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Страница 3</a>
+              </li>
+              <li class="header__item header__item--logo">
+                <a class="header__logo logo-header" href="#">
+                  <div class="logo-header__link">
+                    <img src="../../assets/img/logo.svg" alt="logo" />
+                  </div>
+                </a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Страница 4</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Страница 5</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Страница 6</a>
+              </li>
+            </ul>
+            <ul class="header__mobile-menu mobile-menu" id="mobileMenu">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Страница 1</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Страница 2</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Страница 3</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Страница 4</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Страница 5</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Страница 6</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="main">
+        <div class="container">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">Главная&nbsp;&nbsp;/&nbsp;</li>
+            <li class="breadcrumbs__item breadcrumbs__item--active">Корзина</li>
+          </ul>
+          <div class="content">
+            <div class="content__left">
+              <div class="content__wrap">
+                <h1 class="content__title">Корзина</h1>
+                <div class="content__subtitle subtitle-content">
+                  <p class="subtitle-content__text">Есть аккаунт?</p>
+                  <a class="subtitle-content__link" href="#">
+                    <p>Войти</p>
+                  </a>
+                </div>
+              </div>
+              <form class="content__form form-content" id="form">
+                <div class="form-content__item item-form">
+                  <textarea
+                    class="item-form__field item-form__field--address"
+                    type="text"
+                    name="address"
+                    id="address"
+                    placeholder=" "
+                    data-field="address"
+                    row="1"
+                  ></textarea>
+                  <label class="item-form__title" for="address" id="addressLabel">
+                    <span class="item-form__label">Адрес</span>
+                    <span class="item-form__error">Ошибка ввода</span>
+                  </label>
+                </div>
+
+                <div class="form-content__mobile-map" id="mobileMap"></div>
+                <div class="form-content__wrap">
+                  <div class="form-content__item item-form item-form--name">
+                    <textarea
+                      class="item-form__field item-form__field--name"
+                      name="name"
+                      placeholder=" "
+                      data-field="name"
+                      id="name"
+                      row="1"
+                    ></textarea>
+                    <label class="item-form__title" for="name" id="nameLabel">
+                      <span class="item-form__label">Ваше Имя</span>
+                      <span class="item-form__error">Ошибка ввода</span>
+                    </label>
+                  </div>
+                  <div class="form-content__item item-form item-form--phone">
+                    <textarea
+                      class="item-form__field item-form__field--phone"
+                      name="phone"
+                      data-field="phone"
+                      placeholder=" "
+                      id="phone"
+                      row="1"
+                      ></textarea>
+                    <label class="item-form__title" for="phone" id="phoneLabel">
+                      <span class="item-form__label">Ваш Телефон</span>
+                      <span class="item-form__error">Ошибка ввода</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-content__item item-form item-form--email">
+                  <textarea
+                    class="item-form__field item-form__field--email"
+                    name="email"
+                    placeholder=" "
+                    data-field="email"
+                    id="email"
+                    row="1"
+                    ></textarea>
+                  <label class="item-form__title" for="email" id="emailLabel">
+                    <span class="item-form__label">Ваш Email</span>
+                    <span class="item-form__error">Ошибка ввода</span>
+                  </label>
+                </div>
+                <div class="form-content__item item-form item-form--select" id="selectWrap">
+                  <label class="item-form__title" for="select" id="selectLabel">
+                    <span class="item-form__label">Тип упаковки</span>
+                    <span class="item-form__error">Ошибка ввода</span>
+                  </label>
+                  <select class="item-form__select select" name="select" data-field="select" id="select">
+                    <option class="item-form__option" value="0"></option>
+                    <option class="item-form__option" value="without">без упаковки</option>
+                    <option class="item-form__option" value="standart">стандартная</option>
+                    <option class="item-form__option" value="gift">подарочная</option>
+                  </select>
+                </div>
+                <div class="form-content__item item-form item-form--comment">
+                  <textarea
+                    class="item-form__field item-form__field--comment"
+                    name="comment"
+                    id="comment"
+                    data-field="comment"
+                    placeholder=" "
+                    row="1"
+                    ></textarea>
+                  <label class="item-form__title" for="email">Введите комментарий</label>
+                </div>
+                <div class="form-content__goods goods">
+                  <h2 class="goods__title">Выбранные товары:</h2>
+                  <ul class="goods__list" id="goodsList"></ul>
+                </div>
+                <div class="form-content__total-price price-total">
+                  <p class="price-total__title">Итог:</p>
+                  <p class="price-total__count" id="totalMobile"></p>
+                </div>
+                <button class="form-content__btn-submit" type="submit">Купить</button>
+              </form>
+            </div>
+            <div class="content__right">
+              <div class="map" id="map"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
