@@ -1,7 +1,7 @@
 const countState = {
-  1: 1,
-  2: 1,
-  3: 2,
+  1: 0,
+  2: 0,
+  3: 0,
 };
 
 export { countState };
