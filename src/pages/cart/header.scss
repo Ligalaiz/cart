@@ -198,14 +198,32 @@
     }
 
     &--like {
-      display: block;
+      position: relative;
       width: 2.6rem;
       height: 2.6rem;
 
-      background-position: center;
-      background-size: 2.6rem;
-      background-repeat: no-repeat;
-      background-image: url('../../img/like-icon.svg');
+      &:before {
+        content: '';
+        position: absolute;
+        top: 1.4rem;
+        left: 1.2rem;
+
+        display: block;
+        width: 7rem;
+        height: 7rem;
+
+        transform: translate(-50%, -50%);
+        background: url('../../img/heart.png') no-repeat;
+        background-position: -17px -14px;
+
+        cursor: pointer;
+        animation: fave-heart 1s steps(28);
+      }
+
+      &.active:before {
+        background-position: -2816px -14px;
+        transition: background 1s steps(28);
+      }
 
       @media (min-width: 767.98px) {
         width: 3rem;
@@ -382,4 +400,13 @@
   stroke-dashoffset: -134;
   stroke-width: 8;
   stroke: $white-100;
+}
+
+@keyframes fave-heart {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2800px 0;
+  }
 }
