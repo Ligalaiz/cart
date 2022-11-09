@@ -256,7 +256,7 @@ body.active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.9rem;
+  gap: 1.3rem;
   padding: 0.4rem 0.7rem;
   border: 0.1rem solid $black-100;
 
@@ -541,6 +541,7 @@ body.active {
 .select-selected {
   min-height: 4.1rem;
   padding: 1.5rem 0 0.8rem;
+  border-bottom: 0.1rem solid $grey-1;
 
   color: $grey-1;
 
