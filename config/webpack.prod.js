@@ -18,7 +18,6 @@ module.exports = merge(commonConfig, {
     path: join(paths.root, 'dist'),
     filename: '[name].[chunkhash:10].js',
     chunkFilename: '[name].[chunkhash:10].js',
-    assetModuleFilename: 'assets/[name].[chunkhash:10][ext]',
   },
 
   module: {
