@@ -87,7 +87,10 @@ module.exports = {
         cleanStaleWebpackAssets: false,
       }),
       new CopyPlugin({
-        patterns: [{ from: join(SRC_DIR, 'assets/img/favicons'), to: 'assets/img/favicons' }],
+        patterns: [
+          { from: join(SRC_DIR, 'assets/favicons'), to: 'assets/favicons' },
+          { from: join(SRC_DIR, 'assets/img'), to: 'assets/img' },
+        ],
       }),
     ],
   },
