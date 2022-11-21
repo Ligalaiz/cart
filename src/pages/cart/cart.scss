@@ -58,10 +58,6 @@ body.active {
   &__left {
     width: 100%;
 
-    @media (min-width: 539.98px) {
-      width: unset;
-    }
-
     @media (min-width: 767.98px) {
       width: 50%;
     }
@@ -336,8 +332,13 @@ body.active {
   padding-bottom: 3rem;
   gap: 0.4rem;
 
+  @media (min-width: 544.98px) {
+    max-width: unset;
+  }
+
   @media (min-width: 767.98px) {
     gap: 0.1rem;
+    max-width: 50.6rem;
   }
 
   &__wrap {
